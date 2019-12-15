@@ -17,12 +17,17 @@ def count_words(sentence):
     words = words.join(letters)
     # Use space as separator and store the words to the words list
     words_list = words.split()
+    # Count words frequency
     # Create a dictionary and use it as counter
     count = dict()
     for word in words_list:
-        # if word not in count:
-        #     count[word.strip("'")] = 1
-        # else:
-        #     count[word.strip("'")] += 1
-        count[word.strip("'")] = count.get(word.strip("'"), 0) + 1
+        word = word.strip("'")
+        if word not in count:
+            count[word] = 1
+        else:
+            count[word] += 1
+        # # We would use get() function to make it more concisely.
+        # # The function look up the key and returns the corresponding value.
+        # # If the key does not exist in the dictionary it returns default value.
+        # count[word] = count.get(word, 0) + 1
     return count
