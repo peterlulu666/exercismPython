@@ -2,20 +2,21 @@ def count_words(sentence):
     sentence = "" + sentence
     sentence = sentence.lower()
     letter = ""
-    letters = []
+    letter_list = []
     for letter in sentence:
         # If character is numbers, alphabet letters or a single apostrophe
         # append the character to the list
         if letter.isalnum() or letter == "'":
-            letters.append(letter)
+            letter_list.append(letter)
         # Replace other characters by space and append the space to the list
         else:
-            letters.append(" ")
+            letter_list.append(" ")
     # List of character to string
     # Join character and space
     words = ""
-    words = words.join(letters)
+    words = words.join(letter_list)
     # Use space as separator and store the words to the words list
+    words_list = []
     words_list = words.split()
     # Count words frequency
     # Create a dictionary and use it as counter
