@@ -13,11 +13,12 @@ def count_words(sentence):
             letter_list.append(" ")
     # List of character to string
     # Join character and space
-    words = ""
-    words = words.join(letter_list)
-    # Use space as separator and store the words to the words list
+    words_string = ""
+    words_string = words_string.join(letter_list)
+    # String to list of string
+    # Use space as separator to split the words and store the words to the words list
     words_list = []
-    words_list = words.split()
+    words_list = words_string.split()
     # Count words frequency
     # Create a dictionary and use it as counter
     count = dict()
